@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
+import { MapPin, Clock, Instagram, Facebook } from "lucide-react";
 
 const OG_IMG =
   "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1600&q=80";
@@ -57,31 +57,6 @@ function ContactPage() {
                   <p className="mt-1 font-serif text-lg text-foreground">
                     202 Steeples Blvd<br />Indianapolis, IN
                   </p>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <div className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <Phone className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Phone</p>
-                  <a href="tel:+10000000000" className="mt-1 block font-serif text-lg text-foreground hover:text-primary">
-                    (XXX) XXX-XXXX
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <div className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <Mail className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Email</p>
-                  <a
-                    href="mailto:info@mansionsociety.com"
-                    className="mt-1 block font-serif text-lg text-foreground hover:text-primary"
-                  >
-                    info@mansionsociety.com
-                  </a>
                 </div>
               </li>
               <li className="flex items-start gap-4">
