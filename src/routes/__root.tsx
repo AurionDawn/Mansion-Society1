@@ -35,7 +35,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Mansion Society — Heritage Coffee, Brunch & Bakery" },
+      { title: "Mansion Society" },
       {
         name: "description",
         content:
@@ -44,6 +44,13 @@ export const Route = createRootRoute({
       { name: "author", content: "Mansion Society" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { property: "og:title", content: "Mansion Society" },
+      { name: "twitter:title", content: "Mansion Society" },
+      { name: "description", content: "Best know for the best coffee in Indianapolis with many treats and fun and cozy place to hangout" },
+      { property: "og:description", content: "Best know for the best coffee in Indianapolis with many treats and fun and cozy place to hangout" },
+      { name: "twitter:description", content: "Best know for the best coffee in Indianapolis with many treats and fun and cozy place to hangout" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a8f05481-a7ec-4324-a29c-7268345ee60b/id-preview-e4ff0b5c--49e228e4-a040-4259-9d36-69163173b6e3.lovable.app-1776904734428.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a8f05481-a7ec-4324-a29c-7268345ee60b/id-preview-e4ff0b5c--49e228e4-a040-4259-9d36-69163173b6e3.lovable.app-1776904734428.png" },
     ],
     links: [
       {
