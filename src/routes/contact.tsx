@@ -30,7 +30,9 @@ function ContactPage() {
           <p className="text-xs uppercase tracking-[0.4em] text-primary">Contact</p>
           <h1 className="mt-5 font-serif text-5xl leading-tight text-foreground sm:text-6xl">Connect With Us</h1>
           <div className="mx-auto mt-6 h-px w-16 bg-border" />
-          <p className="mt-6 text-lg italic text-muted-foreground">We'd love to hear from you.</p>
+          <p className="mt-6 text-lg italic text-muted-foreground">
+            Pouring some of the best coffee in Indianapolis — we'd love to hear from you.
+          </p>
         </div>
       </section>
 
