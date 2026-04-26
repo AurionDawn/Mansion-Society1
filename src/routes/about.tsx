@@ -48,6 +48,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:image", content: OG_IMG },
       { name: "twitter:image", content: OG_IMG },
     ],
+    links: [{ rel: "canonical", href: "https://mansionsociety.lovable.app/about" }],
   }),
   component: AboutPage,
 });

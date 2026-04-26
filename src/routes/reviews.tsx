@@ -112,6 +112,32 @@ export const Route = createFileRoute("/reviews")({
       { property: "og:image", content: OG_IMG },
       { name: "twitter:image", content: OG_IMG },
     ],
+    links: [{ rel: "canonical", href: "https://mansionsociety.lovable.app/reviews" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://mansionsociety.lovable.app/#business",
+          name: "Mansion Society",
+          url: "https://mansionsociety.lovable.app",
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.6",
+            reviewCount: "256",
+            bestRating: "5",
+            worstRating: "1",
+          },
+          review: reviews.slice(0, 6).map((r) => ({
+            "@type": "Review",
+            author: { "@type": "Person", name: r.name },
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            reviewBody: r.text,
+          })),
+        }),
+      },
+    ],
   }),
   component: ReviewsPage,
 });
