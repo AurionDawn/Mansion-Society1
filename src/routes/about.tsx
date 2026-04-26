@@ -34,11 +34,11 @@ const values = [
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Our Story — Mansion Society" },
+      { title: "Our Story — Latinx & Women-Owned Coffee Shop in Indianapolis | Mansion Society" },
       {
         name: "description",
         content:
-          "The story behind Mansion Society — a Latinx and women-owned coffee house in a restored Indianapolis mansion serving handcrafted drinks and brunch.",
+          "The story behind Mansion Society — a Latinx and women-owned coffee shop pouring some of the best coffee in Indianapolis from a beautifully restored historic mansion.",
       },
       { property: "og:title", content: "Our Story — Mansion Society" },
       {

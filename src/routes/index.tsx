@@ -46,17 +46,22 @@ const teasers = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Mansion Society — Heritage Coffee, Brunch & Bakery in Indianapolis" },
+      { title: "Mansion Society — Best Coffee in Indianapolis | Brunch & Bakery" },
       {
         name: "description",
         content:
-          "Artisanal coffee, gourmet brunch and house-baked treats inside a beautifully restored mansion. Latinx & women-owned in Indianapolis, IN.",
+          "Voted some of the best coffee in Indianapolis. Mansion Society serves artisanal lattes, gourmet brunch and house-baked treats inside a restored historic mansion. Latinx & women-owned coffee shop in Indianapolis, IN.",
       },
-      { property: "og:title", content: "Mansion Society — Heritage Coffee, Brunch & Bakery" },
+      { property: "og:title", content: "Mansion Society — Best Coffee in Indianapolis" },
       {
         property: "og:description",
         content:
-          "Where heritage meets modern indulgence. Specialty lattes, gourmet pastries and timeless ambiance.",
+          "The best coffee shop in Indianapolis — specialty lattes, gourmet brunch and pastries inside a historic mansion.",
+      },
+      {
+        name: "keywords",
+        content:
+          "best coffee in Indianapolis, Indianapolis coffee shop, specialty coffee Indianapolis, brunch Indianapolis, latte Indianapolis, Japanese cheesecake Indianapolis, Latinx owned coffee shop, women owned coffee shop, Mansion Society",
       },
       { property: "og:image", content: HERO_IMG },
       { name: "twitter:image", content: HERO_IMG },

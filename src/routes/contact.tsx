@@ -7,11 +7,11 @@ const OG_IMG =
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Visit — Mansion Society" },
+      { title: "Visit Us — Best Coffee in Indianapolis | Mansion Society" },
       {
         name: "description",
         content:
-          "Visit Mansion Society at 202 Steeples Blvd, Indianapolis. Hours: Wed–Sat 8am–4pm, Sun 9am–4pm. Closed Monday & Tuesday.",
+          "Visit Mansion Society for the best coffee in Indianapolis. Located at 202 Steeples Blvd, Indianapolis, IN. Hours: Wed–Sat 8am–4pm, Sun 9am–4pm. Closed Monday & Tuesday.",
       },
       { property: "og:title", content: "Connect With Us — Mansion Society" },
       { property: "og:description", content: "We'd love to hear from you. Find our address, hours and how to get in touch." },

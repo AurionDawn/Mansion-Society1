@@ -23,11 +23,11 @@ const images = [
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Mansion Society" },
+      { title: "Gallery — Indianapolis Coffee Shop Interiors & Lattes | Mansion Society" },
       {
         name: "description",
         content:
-          "A glimpse into Mansion Society — interiors, artisanal coffee preparations, and house-baked pastries.",
+          "A visual tour of Mansion Society — historic mansion interiors, artisanal lattes and house-baked pastries from one of the best coffee shops in Indianapolis.",
       },
       { property: "og:title", content: "Visual Delights — Mansion Society Gallery" },
       { property: "og:description", content: "A glimpse into our world of coffee, brunch and timeless ambiance." },
