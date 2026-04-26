@@ -130,6 +130,34 @@ export const Route = createFileRoute("/menu")({
       { property: "og:image", content: OG_IMG },
       { name: "twitter:image", content: OG_IMG },
     ],
+    links: [{ rel: "canonical", href: "https://mansionsociety.lovable.app/menu" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Menu",
+          name: "Mansion Society Menu",
+          url: "https://mansionsociety.lovable.app/menu",
+          inLanguage: "en-US",
+          hasMenuSection: sections.map((s) => ({
+            "@type": "MenuSection",
+            name: s.title,
+            description: s.subtitle,
+            hasMenuItem: s.items.map((it) => ({
+              "@type": "MenuItem",
+              name: it.name,
+              description: it.desc,
+              offers: {
+                "@type": "Offer",
+                price: it.price.replace("$", ""),
+                priceCurrency: "USD",
+              },
+            })),
+          })),
+        }),
+      },
+    ],
   }),
   component: MenuPage,
 });
