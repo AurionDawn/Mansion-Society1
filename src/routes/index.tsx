@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Coffee, Star, MapPin, Clock } from "lucide-react";
+import { ArrowRight, Coffee, Star, MapPin, Clock, HelpCircle } from "lucide-react";
 
 const HERO_IMG =
   "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=2000&q=80";
@@ -43,6 +43,33 @@ const teasers = [
   },
 ];
 
+const faqs = [
+  {
+    q: "Where is Mansion Society located?",
+    a: "Mansion Society is located at 202 Steeples Blvd, Indianapolis, IN — inside a beautifully restored historic mansion on the north side of Indianapolis.",
+  },
+  {
+    q: "What are Mansion Society's hours?",
+    a: "We're open Wednesday through Saturday from 8am to 4pm, and Sunday from 9am to 4pm. We're closed Monday and Tuesday.",
+  },
+  {
+    q: "What kind of coffee shop is Mansion Society?",
+    a: "Mansion Society is a Latinx and women-owned specialty coffee shop in Indianapolis serving artisanal espresso drinks, seasonal lattes with house-made syrups, gourmet brunch sandwiches, and house-baked treats including our signature Japanese cheesecake.",
+  },
+  {
+    q: "What is Mansion Society best known for?",
+    a: "We're best known for serving some of the best coffee in Indianapolis — particularly our Garden Party Latte (lavender, rose & white chocolate), our pillowy in-house Japanese cheesecake, and the Frenchie croissant sandwich, all served inside a historic mansion setting.",
+  },
+  {
+    q: "Does Mansion Society have non-dairy milk options?",
+    a: "Yes — we offer oat milk on every espresso drink and feature several vegan-friendly food options on our menu.",
+  },
+  {
+    q: "Is Mansion Society good for working or studying?",
+    a: "Absolutely. With velvet couches, tall windows, original mouldings and a warm, unhurried atmosphere, the mansion is a favorite spot for remote work, studying and quiet meetings.",
+  },
+];
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -66,38 +93,95 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: HERO_IMG },
       { name: "twitter:image", content: HERO_IMG },
     ],
+    links: [
+      { rel: "canonical", href: "https://mansionsociety.lovable.app/" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "CafeOrCoffeeShop",
-          name: "Mansion Society",
-          description:
-            "Latinx & women-owned coffee shop serving some of the best coffee in Indianapolis — specialty lattes, gourmet brunch and house-baked Japanese cheesecake inside a restored historic mansion.",
-          url: "https://mansionsociety.lovable.app",
-          image: HERO_IMG,
-          servesCuisine: ["Coffee", "Brunch", "Pastries"],
-          priceRange: "$$",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "202 Steeples Blvd",
-            addressLocality: "Indianapolis",
-            addressRegion: "IN",
-            addressCountry: "US",
-          },
-          openingHoursSpecification: [
+          "@graph": [
             {
-              "@type": "OpeningHoursSpecification",
-              dayOfWeek: ["Wednesday", "Thursday", "Friday", "Saturday"],
-              opens: "08:00",
-              closes: "16:00",
+              "@type": ["CafeOrCoffeeShop", "LocalBusiness"],
+              "@id": "https://mansionsociety.lovable.app/#business",
+              name: "Mansion Society",
+              alternateName: "Mansion Society Coffee",
+              description:
+                "Latinx & women-owned coffee shop serving some of the best coffee in Indianapolis — specialty lattes, gourmet brunch and house-baked Japanese cheesecake inside a restored historic mansion.",
+              url: "https://mansionsociety.lovable.app",
+              image: HERO_IMG,
+              servesCuisine: ["Coffee", "Brunch", "Pastries", "Sandwiches"],
+              priceRange: "$$",
+              telephone: "",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "202 Steeples Blvd",
+                addressLocality: "Indianapolis",
+                addressRegion: "IN",
+                addressCountry: "US",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 39.7684,
+                longitude: -86.1581,
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Wednesday", "Thursday", "Friday", "Saturday"],
+                  opens: "08:00",
+                  closes: "16:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Sunday",
+                  opens: "09:00",
+                  closes: "16:00",
+                },
+              ],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.6",
+                reviewCount: "256",
+                bestRating: "5",
+                worstRating: "1",
+              },
+              hasMenu: "https://mansionsociety.lovable.app/menu",
+              sameAs: [
+                "https://www.instagram.com/",
+                "https://www.facebook.com/",
+              ],
+              knowsAbout: [
+                "Specialty coffee",
+                "Espresso",
+                "Latte art",
+                "Japanese cheesecake",
+                "Brunch",
+                "House-made syrups",
+              ],
+              additionalType: "https://schema.org/Restaurant",
+              areaServed: {
+                "@type": "City",
+                name: "Indianapolis",
+              },
             },
             {
-              "@type": "OpeningHoursSpecification",
-              dayOfWeek: "Sunday",
-              opens: "09:00",
-              closes: "16:00",
+              "@type": "WebSite",
+              "@id": "https://mansionsociety.lovable.app/#website",
+              url: "https://mansionsociety.lovable.app",
+              name: "Mansion Society",
+              publisher: { "@id": "https://mansionsociety.lovable.app/#business" },
+              inLanguage: "en-US",
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://mansionsociety.lovable.app/#faq",
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
             },
           ],
         }),
@@ -316,6 +400,30 @@ function Index() {
           >
             Plan your visit <ArrowRight className="h-4 w-4" />
           </Link>
+        </div>
+      </section>
+
+      {/* FAQ — also feeds AEO / answer engines */}
+      <section className="bg-[oklch(0.92_0.014_75)] py-24 lg:py-28">
+        <div className="mx-auto max-w-3xl px-6 lg:px-10">
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-[0.4em] text-primary">Good to know</p>
+            <h2 className="mt-4 font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+              Frequently asked questions.
+            </h2>
+            <div className="mx-auto mt-6 h-px w-16 bg-border" />
+          </div>
+          <dl className="mt-14 divide-y divide-border rounded-xl border border-border/70 bg-background">
+            {faqs.map((f) => (
+              <div key={f.q} className="px-7 py-6">
+                <dt className="flex items-start gap-3 font-serif text-lg text-foreground">
+                  <HelpCircle className="mt-1 h-4 w-4 shrink-0 text-primary" />
+                  {f.q}
+                </dt>
+                <dd className="mt-3 pl-7 text-sm leading-relaxed text-muted-foreground">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
     </div>
