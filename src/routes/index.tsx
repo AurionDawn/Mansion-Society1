@@ -66,6 +66,43 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: HERO_IMG },
       { name: "twitter:image", content: HERO_IMG },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CafeOrCoffeeShop",
+          name: "Mansion Society",
+          description:
+            "Latinx & women-owned coffee shop serving some of the best coffee in Indianapolis — specialty lattes, gourmet brunch and house-baked Japanese cheesecake inside a restored historic mansion.",
+          url: "https://mansionsociety.lovable.app",
+          image: HERO_IMG,
+          servesCuisine: ["Coffee", "Brunch", "Pastries"],
+          priceRange: "$$",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "202 Steeples Blvd",
+            addressLocality: "Indianapolis",
+            addressRegion: "IN",
+            addressCountry: "US",
+          },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Wednesday", "Thursday", "Friday", "Saturday"],
+              opens: "08:00",
+              closes: "16:00",
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: "Sunday",
+              opens: "09:00",
+              closes: "16:00",
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: Index,
 });
