@@ -101,7 +101,7 @@ const distribution = [
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Reviews — Mansion Society" },
+      { title: "Reviews — Best Coffee Shop in Indianapolis | Mansion Society" },
       {
         name: "description",
         content:
