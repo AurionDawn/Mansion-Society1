@@ -58,16 +58,20 @@ function AboutPage() {
     <div>
       {/* Header */}
       <section className="border-b border-border bg-[oklch(0.92_0.014_75)]">
-        <div className="mx-auto max-w-5xl px-6 py-20 text-center lg:py-28">
-          <p className="text-xs uppercase tracking-[0.4em] text-primary">About</p>
-          <h1 className="mt-5 font-serif text-5xl leading-tight text-foreground sm:text-6xl">Our Story</h1>
-          <div className="mx-auto mt-6 h-px w-16 bg-border" />
-          <p className="mt-6 text-lg italic text-muted-foreground">Crafting moments, one cup at a time.</p>
+        <div className="mx-auto max-w-5xl px-5 py-14 text-center sm:px-6 sm:py-20 lg:py-28">
+          <p className="text-[11px] uppercase tracking-[0.32em] text-primary sm:text-xs sm:tracking-[0.4em]">About</p>
+          <h1 className="mt-4 font-serif text-4xl leading-tight text-foreground sm:mt-5 sm:text-5xl md:text-6xl">
+            Our Story
+          </h1>
+          <div className="mx-auto mt-5 h-px w-16 bg-border sm:mt-6" />
+          <p className="mt-5 text-base italic text-muted-foreground sm:mt-6 sm:text-lg">
+            Crafting moments, one cup at a time.
+          </p>
         </div>
       </section>
 
       {/* Story */}
-      <section className="mx-auto grid max-w-7xl gap-14 px-6 py-24 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-20 lg:px-10 lg:py-32">
+      <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:gap-14 sm:px-6 sm:py-24 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-20 lg:px-10 lg:py-32">
         <div className="overflow-hidden rounded-xl shadow-[0px_12px_32px_rgb(60_40_20_/_0.12)]">
           <img
             src={OG_IMG}
@@ -76,11 +80,13 @@ function AboutPage() {
           />
         </div>
         <div>
-          <p className="text-xs uppercase tracking-[0.4em] text-primary">The beginning</p>
-          <h2 className="mt-4 font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+          <p className="text-[11px] uppercase tracking-[0.32em] text-primary sm:text-xs sm:tracking-[0.4em]">
+            The beginning
+          </p>
+          <h2 className="mt-3 font-serif text-3xl leading-tight text-foreground sm:mt-4 sm:text-4xl md:text-5xl">
             Built by hand, with heritage at heart.
           </h2>
-          <div className="mt-8 space-y-5 text-base leading-relaxed text-foreground/80">
+          <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-foreground/80 sm:mt-8 sm:space-y-5 sm:text-base">
             <p>
               Mansion Society was born from a simple idea: that a coffee house can
               feel like a home. Founded by women who refused to compromise on
@@ -102,25 +108,27 @@ function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-[oklch(0.92_0.014_75)] py-24 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section className="bg-[oklch(0.92_0.014_75)] py-16 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-10">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-primary">What guides us</p>
-            <h2 className="mt-4 font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+            <p className="text-[11px] uppercase tracking-[0.32em] text-primary sm:text-xs sm:tracking-[0.4em]">
+              What guides us
+            </p>
+            <h2 className="mt-3 font-serif text-3xl leading-tight text-foreground sm:mt-4 sm:text-4xl md:text-5xl">
               Our mission & values.
             </h2>
           </div>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-5 sm:mt-14 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (
               <div
                 key={v.title}
-                className="rounded-xl border border-border/70 bg-background p-8 transition hover:shadow-[0px_12px_32px_rgb(60_40_20_/_0.1)]"
+                className="rounded-xl border border-border/70 bg-background p-6 transition hover:shadow-[0px_12px_32px_rgb(60_40_20_/_0.1)] sm:p-8"
               >
                 <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   <v.icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-5 font-serif text-xl text-foreground">{v.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.body}</p>
+                <h3 className="mt-4 font-serif text-lg text-foreground sm:mt-5 sm:text-xl">{v.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:mt-3">{v.body}</p>
               </div>
             ))}
           </div>
@@ -128,21 +136,23 @@ function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+      <section className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-32">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs uppercase tracking-[0.4em] text-primary">Visit us</p>
-          <h2 className="mt-4 font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+          <p className="text-[11px] uppercase tracking-[0.32em] text-primary sm:text-xs sm:tracking-[0.4em]">
+            Visit us
+          </p>
+          <h2 className="mt-3 font-serif text-3xl leading-tight text-foreground sm:mt-4 sm:text-4xl md:text-5xl">
             Come find us in Indianapolis.
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+          <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground sm:mt-6 sm:text-base">
             Stop by our historic mansion for what locals call some of the best
             coffee in Indianapolis — pulled to order, served with care.
           </p>
         </div>
-        <div className="mt-12 text-center">
+        <div className="mt-10 text-center sm:mt-12">
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center rounded-lg bg-primary px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.18em] text-primary-foreground shadow-[0px_4px_8px_rgb(0_0_0_/_0.1)] transition hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary-foreground shadow-[0px_4px_8px_rgb(0_0_0_/_0.1)] transition hover:bg-primary/90 sm:px-7 sm:py-3.5 sm:text-sm sm:tracking-[0.18em]"
           >
             Come say hello
           </Link>
