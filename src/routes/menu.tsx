@@ -116,11 +116,11 @@ const sections: Section[] = [
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "Menu — Mansion Society" },
+      { title: "Menu — Best Coffee, Lattes & Brunch in Indianapolis | Mansion Society" },
       {
         name: "description",
         content:
-          "Seasonal specialty lattes, espresso classics, gourmet sandwiches and house-baked treats including our signature Japanese cheesecake.",
+          "Explore the Mansion Society menu — seasonal specialty lattes, espresso classics, gourmet brunch sandwiches and house-baked Japanese cheesecake. Some of the best coffee in Indianapolis.",
       },
       { property: "og:title", content: "Our Curated Selections — Mansion Society" },
       {
