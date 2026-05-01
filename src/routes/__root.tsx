@@ -49,10 +49,11 @@ export const Route = createRootRoute({
       { property: "og:locale", content: "en_US" },
       { property: "og:title", content: "Mansion Society" },
       { name: "twitter:title", content: "Mansion Society" },
-      { property: "og:description", content: "Best known for some of the best coffee in Indianapolis — Latinx & women-owned café with house-baked treats inside a historic mansion." },
-      { name: "twitter:description", content: "Best known for some of the best coffee in Indianapolis — Latinx & women-owned café with house-baked treats inside a historic mansion." },
+      { property: "og:description", content: "Some of the best coffee in Indianapolis. Mansion Society pours specialty lattes, fresh brunch, and house-baked pastries inside a beautifully restored mansion." },
+      { name: "twitter:description", content: "Some of the best coffee in Indianapolis. Mansion Society pours specialty lattes, fresh brunch, and house-baked pastries inside a beautifully restored mansion." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a8f05481-a7ec-4324-a29c-7268345ee60b/id-preview-e4ff0b5c--49e228e4-a040-4259-9d36-69163173b6e3.lovable.app-1776904734428.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a8f05481-a7ec-4324-a29c-7268345ee60b/id-preview-e4ff0b5c--49e228e4-a040-4259-9d36-69163173b6e3.lovable.app-1776904734428.png" },
+      { name: "description", content: "Some of the best coffee in Indianapolis. Mansion Society pours specialty lattes, fresh brunch, and house-baked pastries inside a beautifully restored mansion." },
     ],
     links: [
       {
